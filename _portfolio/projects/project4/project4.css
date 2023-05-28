@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap%22%22");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;700&display=swap%27");
+
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap%27");
 
 
@@ -6,12 +7,13 @@ body {
     direction: rtl;
     background-color: #E5EEFF;
     font-family: "Assistant", sans-serif;
-    padding: 250px 500px 250px;
+    padding: 20px 10px;
+    text-align: center;
 }
 
 .container {
-    display: grid;
-    width: 1200px;
+    display: inline-grid;
+    max-width: 100%;
     margin: 0 auto;
     grid-template-columns: repeat(4, 240px);
     grid-template-rows: repeat(6, 240px);
@@ -27,7 +29,12 @@ body {
 
 .container>div:first-child h1 {
     color: #0EE1DA;
-    font-size: 55px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.container>div h1 {
+    color: #F9F9F9;
 }
 
 .container>div p {
@@ -46,24 +53,36 @@ body {
     flex-direction: column;
 }
 
-
-
 .container>div:last-child {
     grid-column: 3 / span 2;
     grid-row: 4 / span 3;
     background-color: #8E097C;
     text-align: center;
     padding-top: 20px;
-
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.container>div h1 {
-    color: #FFFFFF;
+@media (max-width: 760px) {
+    .container {
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(12, 250px);
+    }
+
+    .container>div:first-child {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .container>div:last-child {
+        grid-column: 1 / span 2;
+        grid-row: 10 / span 3;
+    }
 }
 
 form-container {
-    width: 300px;
-    margin: 0 auto;
+    width: 250px;
 }
 
 .form-container h1,
@@ -72,51 +91,46 @@ form-container {
     padding: 5px 30px;
 }
 
-.form-container label {
-    font-family: 'Heebo', sans-serif;
-    display: block;
-    margin-top: 20px;
-    color: #0EE1DA;
-    text-align: right;
-    margin-right: 45px;
+.form-container p {
+    padding-bottom: 30px;
 }
 
-.form-container input[type="text"] {
-    width: 78%;
+.form-container label {
+    font-family: 'Heebo', sans-serif;
+    color: #0EE1DA;
+    display: block;
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.form-container input {
+    width: 380px;
     padding: 10px;
     margin-top: 5px;
     border: none;
-    border-bottom: 5px solid #0EE1DA;
+    border-bottom: 4px solid #0EE1DA;
+}
+
+button {
+    font-family: 'Heebo', sans-serif;
+    width: 81%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #0EE1DA;
+    color: #011560;
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
 }
 
 #input3 {
     height: 100px;
 }
 
-button {
-    font-family: 'Heebo', sans-serif;
-    width: 82%;
-    padding: 8px 16px;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 20px;
-    background-color: #0EE1DA;
-    color: #011560;
-    border: none;
-    cursor: pointer;
-}
-
-
 .form-container h1 {
-    font: normal normal bold 35px/46px Assistant;
-    letter-spacing: 0px;
     color: #FFFFFF;
-    opacity: 1;
-
-}
-
-.form-container p {
-    padding-bottom: 30px;
 }
 
 .container>div:nth-child(2) {

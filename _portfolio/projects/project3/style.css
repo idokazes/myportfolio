@@ -231,3 +231,19 @@ footer {
   width: 700px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.project-btn {
+  margin-top: 20px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  padding: 6px 32px;
+  color: #000;
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  text-decoration: none;
+}
+
+.project-btn a {
+  color: #000;
+
+}

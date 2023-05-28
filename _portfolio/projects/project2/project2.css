@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;700&display=swap%27");
+
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap%27");
+
+
 body {
     direction: rtl;
+    font-family: 'Heebo', sans-serif;
 }
 
 .row {
@@ -15,7 +21,7 @@ body {
 }
 
 .img {
-    background-image: url(Coffee.png);
+    background-image: url(assets/Coffee.png);
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -27,7 +33,16 @@ body {
     justify-content: center;
 }
 
+h1 {
+    font-size: 35px;
+    color: #020253;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
 
+p {
+    color: #020253;
+}
 
 form {
     max-width: 350px;
@@ -35,8 +50,25 @@ form {
 }
 
 label {
+    color: #2C2C2C;
     display: block;
     margin: 20px 0;
+}
+
+.form-control {
+    background-color: #E5EEFF;
+    border-radius: 0%;
+    border-bottom: 1px solid #020253;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #020253;
+    color: #FFFFFF;
+    padding: 5px 40px;
 }
 
 @media (max-width: 768px) {
