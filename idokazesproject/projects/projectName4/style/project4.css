@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;700&display=swap%27");
+
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap%27");
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out 1;
+    direction: rtl;
+    background-color: #E5EEFF;
+    font-family: "Assistant", sans-serif;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.container {
+    display: inline-grid;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 240px);
+    grid-template-rows: repeat(6, 240px);
+    gap: 15px;
+}
+
+.container>div {
+    background-color: #020253;
+    border: 1px solid #020253;
+    text-align: center;
+    border: none;
+}
+
+.container>div:first-child h1 {
+    color: #0EE1DA;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.container>div h1 {
+    color: #F9F9F9;
+}
+
+.container>div p {
+    color: #F9F9F9;
+}
+
+.container>div:first-child {
+    padding: 50px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    background-color: #020253;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container>div:last-child {
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 3;
+    background-color: #8E097C;
+    text-align: center;
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 760px) {
+    .container {
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(12, 250px);
+    }
+
+    .container>div:first-child {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .container>div:last-child {
+        grid-column: 1 / span 2;
+        grid-row: 10 / span 3;
+    }
+}
+
+form-container {
+    width: 250px;
+}
+
+.form-container h1,
+.form-container p {
+    text-align: center;
+    padding: 5px 30px;
+}
+
+.form-container p {
+    padding-bottom: 30px;
+}
+
+.form-container label {
+    font-family: 'Heebo', sans-serif;
+    color: #0EE1DA;
+    display: block;
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.form-container input {
+    width: 380px;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 4px solid #0EE1DA;
+}
+
+button {
+    font-family: 'Heebo', sans-serif;
+    width: 81%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #0EE1DA;
+    color: #011560;
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+#input3 {
+    height: 100px;
+}
+
+.form-container h1 {
+    color: #FFFFFF;
+}
+
+.container>div:nth-child(2) {
+    background-image: url(../images/Rectangle\ 514.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(3) {
+    background-image: url(../images/Rectangle\ 515.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(4) {
+    background-image: url(../images/Rectangle\ 506-5.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(5) {
+    background-image: url(../images/Rectangle\ 516.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(6) {
+    background-image: url(../images/Rectangle\ 506-1.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(7) {
+    background-image: url(../images/Rectangle\ 506-4.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(8) {
+    background-image: url(../images/Rectangle\ 506-3.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(9) {
+    background-image: url(../images/Rectangle\ 506-2.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(10) {
+    background-image: url(../images/Rectangle\ 506-7.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(11) {
+    background-image: url(../images/Rectangle\ 506-8.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(12) {
+    background-image: url(../images/Rectangle\ 506-6.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(13) {
+    background-image: url(../images/Rectangle\ 506-9.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(14) {
+    background-image: url(../images/Rectangle\ 506.png);
+    background-size: cover;
+}
+
+.container>div:nth-child(15) {
+    background-image: url(../images/Rectangle\ 513.png);
+    background-size: cover;
+}
