@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Bangers&family=Montserrat:wght@300;400&family=Poppins:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+body {
+  margin: 0;
+  background-image: url(https://i.pinimg.com/564x/e9/35/ad/e935ad0135f57cee3d21ec327c9f6dde.jpg);
+  background-size: cover;
+  font-family: "Bangers", cursive;
+}
+
+.page-title {
+  color: #fff;
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+  text-align: center;
+  font-size: 5em;
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+.game-info {
+  color: #fff;
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+  font-size: 2em;
+}
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
+}
+
+.card {
+  position: relative;
+  height: 175px;
+  width: 125px;
+  border-radius: 12px;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: trasform 100ms ease-in-out;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+  transition: transform 500ms ease-in-out;
+}
+
+.card.visible .card-back {
+  transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+  transform: rotateY(0);
+}
+.overlay-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  color: #fff;
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+  transition: background-color 500ms, font-size 500ms;
+}
+.overlay-text-small {
+  font-size: 0.3em;
+}
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 10em;
+  }
+}
+
+.card-back {
+  background-color: #000;
+  border-color: rgb(245, 221, 6);
+}
+.card-front {
+  transform: rotateY(180deg);
+  border-color: rgb(245, 221, 6);
+}
+
+.bgcard {
+  width: 100%;
+  height: 100%;
+  object-fit: initial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card-value {
+  width: 100%;
+  height: 100%;
+  object-fit: initial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+  }
+  .game-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 6em;
+      text-align: center;
+    }
+  }
+  .page-title {
+    font-size: 4em;
+  }
+}

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap");
+
+html {
+  min-height: 100%;
+}
+
+body {
+  direction: rtl;
+  background-color: rgb(238, 200, 33);
+  padding-bottom: 200px;
+}
+
+* {
+  font-family: "Rubik", sans-serif !important;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 16px;
+  color: #fff;
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+}
+
+.frame {
+  width: 80%;
+  max-width: 900px;
+  min-height: auto;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.task {
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 12px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 0;
+  margin: 0px;
+}
+
+button {
+  background-color: #8bc34a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input,
+select {
+  border: 1px solid black;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+.alert {
+  padding: 8px 12px;
+  margin: 0 -16px;
+  text-align: center;
+  border: 1px dashed;
+  border-right: 0;
+  border-left: 0;
+  font-size: 20px;
+  background-color: gray;
+  margin-bottom: 12px;
+  color: white;
+}
+
+header {
+  margin-bottom: 12px;
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 930px) {
+  .tasks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tasks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header > input,
+  header > select {
+    display: block;
+    margin: 10px 0px;
+  }
+}
+
+.tasks > div {
+  background-image: url(/projects/projectName7/images/taskgreenbg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  min-height: 300px;
+  padding: 60px 65px;
+  font-size: 15px;
+}
+
+.tasks > div h3 {
+  margin: 0px;
+  margin-top: 50px;
+}
+
+.tasks > div.completed {
+  background-image: url(/projects/projectName7/images/tackpingbg.jpg);
+  padding: 60px 80px;
+}
+
+.tasks footer {
+  padding: 8px 0;
+}
+
+.tasks footer .remove {
+  background-color: #bb4949;
+}
+
+button.edit {
+  background-color: #00bcd4;
+}
+
+button.save {
+  background-color: #4caf50;
+}
+
+button.hidden {
+  display: none;
+}

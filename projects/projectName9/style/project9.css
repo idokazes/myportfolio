@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Bangers&family=Montserrat:wght@300;400&family=Poppins:wght@500&family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("https://i.pinimg.com/564x/ab/78/a6/ab78a69c90b27e802d8d304d40419426.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #ff8800;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
+    2px 2px 0 white;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 25%;
+}
+
+.info > div {
+  color: #000;
+  font-weight: bold;
+  background-color: #5cca08ef;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+  width: 70%;
+  direction: rtl;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.info h2 {
+  color: #ff8800;
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
+    2px 2px 0 white;
+}
+
+.calculator {
+  justify-content: right;
+  background: linear-gradient(45deg, #0a0a0a, #3a4452);
+  border: 1px solid #717377;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+  margin-bottom: 10px;
+}
+
+input {
+  width: 320px;
+  border: none;
+  padding: 24px;
+  margin: 10px;
+  background: transparent;
+  box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+  font-size: 40px;
+  text-align: right;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+button {
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+button:hover {
+  scale: 1.1;
+  background-color: #4d4b4b;
+}
+
+button.equalBtn {
+  border-radius: 50%;
+  background-color: #fb7c14;
+}
+.operator {
+  color: #6dee0a;
+}
+
+@media (max-width: 768px) {
+  .calculator {
+    margin: auto;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .info {
+    margin: 20px;
+    width: 100%;
+  }
+  .info > div {
+    margin: auto;
+  }
+  h1 {
+    position: relative;
+    left: auto;
+  }
+}

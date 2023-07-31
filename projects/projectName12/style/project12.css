@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap");
+
+html {
+  min-height: 100%;
+}
+
+body {
+  direction: rtl;
+  background-image: url(/projects/projectName12/images/bgshop.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 200px;
+}
+
+* {
+  font-family: "Rubik", sans-serif !important;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+  margin: 16px;
+  font-family: "Gloria Hallelujah", cursive !important;
+  font-size: 60px;
+}
+
+.frame {
+  width: 80%;
+  max-width: 900px;
+  min-height: 300px;
+  background-color: #ffffffc9;
+  margin: auto;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.task {
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 12px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 0;
+  margin: 0px;
+}
+
+button {
+  background-color: #bf8823;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  margin-right: 8px;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input,
+select {
+  border: 1px solid black;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+.login,
+.user,
+.products,
+.registration {
+  display: none;
+}
+
+.logout {
+  background-color: #bf8823;
+}
+
+.login span {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login p {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.registration span {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.registration p {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.registration label,
+P {
+  display: block;
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+tr {
+  background-color: white;
+}
+
+thead tr {
+  background-color: #bf8823;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #d9d9d9;
+}
+
+th,
+td {
+  padding: 6px;
+  text-align: center;
+}
+
+.remove,
+.save {
+  margin: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.remove:hover,
+.save:hover {
+  scale: 1.5;
+}
+
+.remove {
+  background: none;
+}
+
+.save {
+  background: none;
+  visibility: hidden;
+}
+
+.loaderFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000000a3;
+  display: none;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid gray;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-bottom: 100px;
+  }
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .frame {
+    overflow-x: hidden;
+    background-color: #ffffffc9;
+  }
+  table {
+    font-size: 11px;
+    font-weight: bold;
+    width: 100%;
+    table-layout: fixed;
+    background-color: #ffffffc9;
+  }
+  th,
+  td {
+    padding: 8px;
+  }
+  .registration button {
+    margin-top: 10px;
+  }
+
+  .registration span {
+    display: block;
+  }
+
+  .login button {
+    margin-top: 10px;
+  }
+  .login label,
+  .login button {
+    display: block;
+  }
+  tfoot tr td:first-child {
+    display: none;
+  }
+
+  tfoot {
+    width: 100%;
+  }
+  tfoot tr {
+    background-color: #ffffffc9;
+  }
+
+  tfoot td {
+    display: block;
+    padding: 8px;
+  }
+
+  tfoot input {
+    width: 400%;
+    margin-top: 3px;
+  }
+  tfoot button {
+    width: 400%;
+  }
+  @media (max-width: 375px) {
+    .registration input {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 601px) {
+  h1 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .frame {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  table {
+    font-size: 2vw;
+    width: 100%;
+  }
+  th,
+  td {
+    padding: 1vw;
+  }
+}

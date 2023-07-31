@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SNAKE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/projects/projectName11/style/project11.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script/script.js" defer></script>
+  </head>
+
+  <body onload="createBoard()">
+    <h1>snake</h1>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2 id="popup-message"></h2>
+        <button id="popup-close">Close and restart</button>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="game-info-container">
+        <div class="game-info">Time: <span id="time">00:00</span></div>
+        <div class="game-info">score: <span id="score">0</span></div>
+      </div>
+      <div class="frame">
+        <div class="board"></div>
+      </div>
+    </div>
+  </body>
+</html>

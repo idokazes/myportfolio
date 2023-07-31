@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+html {
+  background-color: rgba(189, 20, 231, 0.705);
+}
+body {
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  margin: 16px;
+  margin-bottom: 10px !important;
+}
+.tictactoe {
+  margin: 60px auto;
+  background-color: black;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.turn {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.tictactoe .btn {
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  background-color: white;
+  width: calc(33% - 6px);
+  height: calc(33% - 6px);
+  margin: 3px;
+}
+
+.winner {
+  font-size: 140px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: zoom-in 2s;
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+@media (max-width: 900px) {
+  .tictactoe {
+    margin-top: 100px;
+  }
+  @keyframes zoom-in {
+    0% {
+      transform: scale(0);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+  .winner {
+    text-align: center;
+  }
+}

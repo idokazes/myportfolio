@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Rest API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/projects/projectName12/style/project12.css" />
+    <script src="/projects/projectName12/script/script.js" defer></script>
+  </head>
+
+  <body onload="loginStatus()">
+    <h1>grocery store</h1>
+
+    <div class="frame">
+      <div class="login">
+        <label>
+          שם משתמש:
+          <input type="text" id="userName" placeholder="idokazes" />
+        </label>
+
+        <label>
+          סיסמא:
+          <input type="password" placeholder="123456" />
+        </label>
+
+        <button onclick="login()">התחבר</button>
+        <p>אם אין לך חשבון, <span onclick="showRegistration()">הירשם</span></p>
+      </div>
+
+      <div class="registration">
+        <label>
+          שם מלא:
+          <input type="text" id="fullNameReg" />
+        </label>
+
+        <label>
+          אימייל:
+          <input type="email" id="emailReg" />
+        </label>
+
+        <label>
+          שם משתמש:
+          <input type="text" id="userNameReg" />
+        </label>
+
+        <label>
+          סיסמא:
+          <input type="password" id="passwordReg" />
+        </label>
+
+        <button onclick="register()">הירשם</button>
+        <p>
+          יש לי כבר חשבון,<span onclick="showLogin()">לחץ כאן להתחברות</span>
+        </p>
+      </div>
+
+      <div class="user">
+        <span class="userName"></span>
+        <button class="logout" onclick="logout()">התנתק</button>
+      </div>
+
+      <div class="user"></div>
+
+      <div class="products">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>שם המוצר</th>
+              <th>מחיר</th>
+              <th>הנחה</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td><input id="name" type="text" placeholder="שם המוצר" /></td>
+              <td><input id="price" type="number" placeholder="מחיר" /></td>
+              <td><input id="discount" type="number" placeholder="הנחה" /></td>
+              <td><button onclick="addProduct()">הוסף</button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <div class="loaderFrame">
+      <div class="loader"></div>
+    </div>
+
+    <div id="snackbar"></div>
+  </body>
+</html>
