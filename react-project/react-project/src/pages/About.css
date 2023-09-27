@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.mydiv {
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: azure;
+  background-color: palevioletred;
+  text-shadow: 2px 2px 4px black;
+}
+.mydiv h1 {
+  font-family: "Pacifico", cursive !important;
+  font-size: 60px;
+}
+.mydiv h2 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.mydiv p {
+  margin-top: 20px;
+  font-size: 30px;
+  padding: 50px;
+}
